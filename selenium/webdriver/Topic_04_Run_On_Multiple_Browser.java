@@ -1,10 +1,10 @@
 package webdriver;
 
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.Test;
-
-import java.util.concurrent.TimeUnit;
 
 public class Topic_04_Run_On_Multiple_Browser {
     WebDriver driver;
@@ -12,20 +12,41 @@ public class Topic_04_Run_On_Multiple_Browser {
 
     @Test
     public void TC01_Chrome() {
+        // Executable File: chromedriver/ geckodriver/ edge driver...
+        System.setProperty("webdriver.chrome.driver", projectPath + "/browserDrivers/chromedriver.exe");
 
+        // Class: FirefoxDriver/ ChromeDriver/ EdgeDriver
+        driver = new ChromeDriver();
+
+        driver.get("https://www.facebook.com/");
+
+        driver.quit();
     }
 
     @Test
     public void TC02_Firefox() {
+        // Executable File: chromedriver/ geckodriver/ edge driver...
         System.setProperty("webdriver.gecko.driver", projectPath + "/browserDrivers/geckodriver.exe");
+
+        // Class: FirefoxDriver/ ChromeDriver/ EdgeDriver
         driver = new FirefoxDriver();
-        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+
+        driver.get("https://www.facebook.com/");
 
         driver.quit();
     }
 
     @Test
     public void TC03_Edge() {
+        // Executable File: chromedriver/ geckodriver/ edge driver...
+        System.setProperty("webdriver.edge.driver", projectPath + "/browserDrivers/edgedriver.exe");
+
+        // Class: FirefoxDriver/ ChromeDriver/ EdgeDriver
+        driver = new EdgeDriver();
+
+        driver.get("https://www.facebook.com/");
+
+        driver.quit();
 
     }
 
