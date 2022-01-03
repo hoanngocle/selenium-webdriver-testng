@@ -1,7 +1,6 @@
 package webdriver;
 
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
@@ -9,11 +8,9 @@ import org.testng.annotations.Test;
 
 import java.util.concurrent.TimeUnit;
 
-public class Topic_04_Browser_Element_Method {
+public class Topic_04_Part_II {
     // Declare a variable representing Selenium WebDriver
     WebDriver driver;
-    WebElement element;
-
     // Get project path
     String projectPath = System.getProperty("user.dir");
 
@@ -28,24 +25,11 @@ public class Topic_04_Browser_Element_Method {
     }
 
     @Test
-    public void TC01_Browser() {
-        // function and method to interact with Browser throught driver
-        /*
-         * Action in Browser
-         * - Open browser
-         * - Open Url
-         * - Refresh/ Back/ Forward
-         * - Maximize/ Minimize/ Fullscreen
-         * ...
-         *
-         * Get data from browser
-         * Get Url, title, source page
-         */
+    public void TC01() {
     }
 
     @Test
-    public void TC02_Element() {
-        // function and method to interact with Browser throught element
+    public void TC02() {
 
     }
 

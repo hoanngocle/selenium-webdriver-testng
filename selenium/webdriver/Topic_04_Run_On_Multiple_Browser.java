@@ -1,10 +1,14 @@
 package webdriver;
 
-import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.testng.Assert;
 import org.testng.annotations.Test;
+
+import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 public class Topic_04_Run_On_Multiple_Browser {
     WebDriver driver;
@@ -18,6 +22,7 @@ public class Topic_04_Run_On_Multiple_Browser {
         // Class: FirefoxDriver/ ChromeDriver/ EdgeDriver
         driver = new ChromeDriver();
 
+        // Open url
         driver.get("https://www.facebook.com/");
 
         driver.quit();
